@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Bootstrap</title>
+        <style>
+            .alt {
+                height: 250px;
+            }
+            .cnt {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+        <div class="navbar-brand">
+            Bootest
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ide">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+
+        <div id="ide" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item btn btn-sm btn-outline-secondary mx-1 my-1" >
+                    <a class="nav-link" data-toggle="tab">Linkedin</a>
+                </li>
+                <li class="nav-item btn btn-sm btn-outline-secondary mx-1 my-1">
+                    <a class="nav-link text-center" data-toggle="tab">GitHub</a>
+                </li>
+                <li class="nav-item btn btn-sm btn-outline-secondary mx-1 my-1">
+                    <a class="nav-link text-center" data-toggle="tab">Gmail</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="bg-info text-light alt cnt">Primeiro Slide</div>
+            </div>
+            <div class="carousel-item">
+                <div class="bg-danger text-light alt cnt">Segundo Slide</div>
+            </div>
+            <div class="carousel-item">
+                <div class="bg-warning text-light alt cnt">Terceiro Slide</div>
+            </div>
+        </div>
+        <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+        <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+    </div>
+    
+    <button data-toggle="modal" data-target="#meu-modal" data-placement="right"  class="btn btn-success" data-bs-toggle="tooltip" title="Você vai se arrepender">Não aperte</button>
+
+    <div class="modal fade" id="meu-modal">
+        <div class="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Eu avisei</h1>
+                </div>
+                <div class="modal-body text-center">
+                    <p>¯\_( ͡° ͜ʖ ͡°)_/¯</p>                  
+                    <p>8==D</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button data-placement="right"  class="btn btn-success" data-bs-toggle="popover" title="Isso é um popover" data-content="Sabia?" data-trigger="focus">
+        Popover
+    </button>
+    <div class="container">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        primeiro
+                    </th>
+                    <th>
+                        segundo
+                    </th>
+                    <th>
+                        terceiro
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>ruan</td>
+                    <td>marco</td>
+                    <td>juliete</td>
+                </tr>
+                <tr>
+                    <td>ruan</td>
+                    <td>marco</td>
+                    <td>juliete</td>
+                </tr><tr>
+                    <td>ruan</td>
+                    <td>marco</td>
+                    <td>juliete</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+
+
+
+
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+    <script>
+        $(document).ready(() => $("[data-bs-toggle='tooltip']").tooltip())
+        $(document).ready(() => $("[data-bs-toggle='popover']").popover())
+
+    </script>
+</body>
+</html>

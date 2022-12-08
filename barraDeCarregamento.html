@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Barra de carregamento</title>
+    <!---
+    INFO: Barra de progresso
+        Elemento parent:
+            "progress"
+        Elemento filho
+            "progress-bar"
+            "progress-bar-striped"
+            "progress-bar-animated"
+            style="width: Xpx" => determina o tamanho da barra
+-->
+</head>
+<body>
+    <div class="progress mb-2">
+        <div class="progress-bar" style="width: 30%">30%
+        </div>
+    </div>
+    <div class="progress mb-2">
+        <div class="progress-bar progress-bar-striped" style="width: 60%">60%
+        </div>
+    </div>
+    <div class="progress mb-2">
+        <div class="progress-bar progress-bar-striped progress-bar-animated"></div>
+    </div>
+    <div class="progress mb-2">
+        <div id="barra" class="progress-bar progress-bar-striped progress-bar-animated bg-danger"></div>
+    </div>
+    <button id="btn" class="btn btn-outline-danger" onclick="carregamento()">Carregar</button>
+    <script>
+        const barra = document.querySelector("#barra")
+        const btn = document.querySelector("#btn")
+
+        function carregamento(element=true) {
+            let width = new Number()
+            if (btn.textContent == "Parrar") btn.innerHTML = `Continuar`
+            else if (btn.textContent == "Continuar") btn.innerHTML = `Parrar`
+            else {
+                btn.innerHTML = `Parrar`
+                setInterval( function(e) {
+                    if (btn.textContent == "Parrar") {
+                        if (width > 100) {
+                            width = 0
+                            btn.innerHTML = `Recomeçar`
+                            clearInterval()
+                            return
+                        }
+                        barra.innerHTML = `${width}%` 
+                        barra.style = `width: ${width}%`
+                        width++
+                    }
+                    else {
+                        clearInterval()
+                    }
+                }, 650)
+            }
+        }
+    </script>
+</body>
+</html>

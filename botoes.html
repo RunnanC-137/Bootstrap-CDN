@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Botoes</title>
+</head>
+<!--
+    INFO: pode ser usado em <button>, <input> e <a>
+    btn => botão do bootstrap
+    btn-(cor do bootstrap) => botão colorido
+    btn-outline-(cor do bootstrap) => botão minimalista 
+    btn-ms => botão pequeno
+    btn-lg => botão grande
+    btn-block => botão espaçoso
+    disabled => botão sempre desabilitado
+    active => botão sempre ativo
+
+    Grupo de botões
+    INFO: Tem que ser usado como um elemento parent de um grupo de botões do bootstrap
+    btn-group => grupo de botoes na horizontal
+    btn-group-vertical => grupo de botoes na vertical
+    btn-group-sm => grupo de botões pequenos
+    btn-group-lg => grupo de botões grandes
+
+-->
+<body>
+    <button class="btn">Normal</button>
+    <button class="btn btn-info">Colorido</button>
+    <button class="btn btn-outline-info">Minimalista</button>
+    <button class="btn btn-info btn-lg">Grande</button>
+    <button class="btn btn-info btn-sm">Pequeno</button>
+    <button class="btn btn-info btn-block">Espaçoso</button>
+    <a href="http://localhost:3000/turno/relatorio/1" class="btn btn-info" role="button" target="_blank">Link Button</a>
+    <button class="btn btn-info disabled">Desabilitado</button>
+    <div class="btn-group ">
+        <button class="btn btn-info">Grupo</button>
+        <button class="btn btn-info">De</button>
+        <button class="btn btn-info">Botões</button>
+        <button class="btn btn-info">Normal</button>
+    </div>
+    <div class="btn-group-vertical">
+        <button class="btn btn-info">Grupo</button>
+        <button class="btn btn-info">De</button>
+        <button class="btn btn-info">Botões</button>
+        <button class="btn btn-info">Vertical</button>
+    </div>
+    <div class="btn-group btn-group-sm">
+        <button class="btn btn-info">Grupo</button>
+        <button class="btn btn-info">De</button>
+        <button class="btn btn-info">Botões</button>
+        <button class="btn btn-info">Pequeno</button>
+    </div>
+    <div class="btn-group btn-group-lg">
+        <button class="btn btn-info">Grupo</button>
+        <button class="btn btn-info">De</button>
+        <button class="btn btn-info">Botões</button>
+        <button class="btn btn-info">Grande</button>
+    </div>
+    
+</body>
+</html>
